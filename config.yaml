@@ -1,0 +1,29 @@
+# PSA 10 Profit Scanner — Configuration
+# Replace the placeholder values with your real eBay Developer keys.
+# Get keys at: https://developer.ebay.com
+# Use PRODUCTION keys (not Sandbox) to search live listings.
+
+ebay:
+  app_id:  "YOUR-EBAY-APP-ID-HERE"
+  cert_id: "YOUR-EBAY-CERT-ID-HERE"
+  dev_id:  "YOUR-EBAY-DEV-ID-HERE"
+
+# ─── Grading Thresholds (advanced users only) ─────────────────────────────
+# Centering: PSA 10 requires 55/45 on front. 0.55 = strict. Lower = stricter.
+centering_threshold: 0.55
+
+# Minimum image resolution (pixels). Below this = stock photo / reject.
+min_image_px: 1000
+
+# Glint: fraction of holo area overexposed before flagging (0.02 = 2%)
+glint_fraction_threshold: 0.02
+
+# Scratch: edge density within glare zones (0.003 = 0.3%)
+scratch_edge_threshold: 0.003
+
+# Corner whitening: number of white pixels in a corner patch to trigger flag
+white_pixel_cluster: 30
+
+# ─── Financial Defaults ───────────────────────────────────────────────────
+grading_fee: 25.00
+shipping_estimate: 5.00
